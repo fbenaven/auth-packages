@@ -1,6 +1,6 @@
 {
   "name": "@fbenaven/auth-bff-hono",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Hono middleware and route handlers for the BFF authentication system. It orchestrates secure cookie management, CSRF protection, and JWT verification.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -9,15 +9,7 @@
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
-    "@fbenaven/auth-bff-core": "*",
-    "jose": "^6.1.3"
-  },
-  "peerDependencies": {
-    "hono": "^4.0.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.3.3",
-    "hono": "^4.11.4"
+    "@fbenaven/auth-bff-core": "1.0.0"
   },
   "files": [
     "dist"
