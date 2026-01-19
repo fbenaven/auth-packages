@@ -1,0 +1,28 @@
+{
+  "name": "@fbenaven/auth-bff-client",
+  "version": "1.0.0",
+  "description": "A lightweight, framework-agnostic TypeScript client for interacting with the BFF Auth API. It handles authentication state, CSRF token management, and authenticated fetching.",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fbenaven/auth-packages.git",
+    "directory": "packages/auth-bff-client"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "keywords": [],
+  "author": "AI Generated",
+  "license": "MIT"
+}

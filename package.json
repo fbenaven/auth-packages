@@ -1,0 +1,21 @@
+{
+  "name": "auth-packages",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces",
+    "test": "npm run test --workspaces"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  },
+  "description": "This monorepo contains four TypeScript libraries for authentication and authorization workflows, designed to be modular and composable for modern web applications. Each package serves a distinct purpose and can be used independently or together.",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}

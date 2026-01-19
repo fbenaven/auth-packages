@@ -1,0 +1,28 @@
+{
+  "name": "@fbenaven/auth-bff-core",
+  "version": "1.0.0",
+  "description": "The core logic and types for the Backend-for-Frontend (BFF) authentication system. This package handles platform-agnostic cryptography (Web Crypto API) and Identity Provider (IdP) adapters.",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fbenaven/auth-packages.git",
+    "directory": "packages/auth-bff-core"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "keywords": [],
+  "author": "AI Generated",
+  "license": "MIT"
+}
