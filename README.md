@@ -354,7 +354,7 @@ sequenceDiagram
 ```mermaid
 flowchart LR
     A["User Credentials<br/>(email, password)"] -->|auth-bff-client| B["Identity Provider<br/>(Supabase)"]
-    B -->|JWT Tokens<br/>(access, refresh)| C["auth-bff-core<br/>(AES-GCM Encryption)"]
+    B -->|JWT Tokens| C["auth-bff-core<br/>(AES-GCM Encryption)"]
     C -->|Encrypted Session| D["HttpOnly Cookie<br/>(Secure Storage)"]
     D -->|Browser Auto-Include| E["auth-bff-hono<br/>(Middleware)"]
     E -->|Decryption + JWT Verify| F["Session Data<br/>& User Info"]
