@@ -9,7 +9,15 @@
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
-    "@fbenaven/auth-bff-core": "1.0.0"
+    "@fbenaven/auth-bff-core": "1.0.0",
+    "jose": "^6.1.3"
+  },
+  "peerDependencies": {
+    "hono": "^4.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "hono": "^4.11.4"
   },
   "files": [
     "dist"
