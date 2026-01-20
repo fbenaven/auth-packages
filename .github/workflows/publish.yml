@@ -14,25 +14,20 @@ jobs:
     permissions:
       contents: read
       packages: write
-    
-     steps:
-       - name: Checkout code
-         uses: actions/checkout@v3
-
-       - name: Setup Node.js
-         uses: actions/setup-node@v3
-         with:
-           node-version: '18'
-           registry-url: 'https://npm.pkg.github.com'
-           scope: '@fbenaven'
-
-       - name: Install dependencies
-         run: pnpm install --frozen-lockfile
-
-       - name: Build all packages
-         run: pnpm --recursive run build
-
-       - name: Publish packages
-         run: pnpm --recursive publish --access public
-         env:
-           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@fbenaven'
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Build all packages
+        run: pnpm --recursive run build
+      - name: Publish packages
+        run: pnpm --recursive publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
