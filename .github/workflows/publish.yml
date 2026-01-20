@@ -26,13 +26,13 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
           scope: '@fbenaven'
       
-      - name: Install dependencies
-        run: npm ci
-      
-      - name: Build all packages
-        run: npm run build --workspaces
-      
-      - name: Publish packages
-        run: npm publish --workspaces --access public
+       - name: Install dependencies
+         run: pnpm install --frozen-lockfile
+
+       - name: Build all packages
+         run: pnpm --recursive run build
+
+       - name: Publish packages
+         run: pnpm --recursive publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

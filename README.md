@@ -278,10 +278,10 @@ sequenceDiagram
 
 ### Installation
 
-This is a monorepo managed with npm workspaces. To install all dependencies:
+This is a monorepo managed with pnpm workspaces. To install all dependencies:
 
 ```bash
-npm install
+pnpm install
 ```
 
 ### Building
@@ -289,7 +289,7 @@ npm install
 Build all packages:
 
 ```bash
-npm run build --workspaces
+pnpm --recursive run build
 ```
 
 ### Project Structure
